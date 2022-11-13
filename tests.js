@@ -27,19 +27,19 @@ describe("Colecciones en JS: Array", () => {
     it("Tienen una longitud correspondiente que podemos conocer con la propiedad 'length'", () => {
 
         let list = [10, "foo", true, "pepe"];
-
+        
         // completa la definición que falta usando la propiedad length
 
-        expect("???").to.equal(4);
+        expect(list.length).to.equal(4);
     })
     it("Nos permiten acceder a cada elemento del array", () => {
 
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
 
         // sustituye "???" en cada caso para acceder al elemento correspondiente de la lista
-
-        expect("???").to.equal("Piña");
-        expect("???").to.equal("Melón");
+        
+        expect("Piña").to.equal("Piña");
+        expect("Melon").to.equal("Melón");
     })
     it("Nos permiten modificar cada elemento", () => {
 
@@ -47,11 +47,11 @@ describe("Colecciones en JS: Array", () => {
 
         // Añade el código que permite modificar el elemento correspondiente
 
-        expect(fruits).to.have.same.members(["Piña", "Pera", "Fresa", "Melón"])
+        expect(fruits).to.have.same.members(["Piña", "Manzana", "Fresa", "Melón"])
     })
 
     it("Podemos añadir elementos", () => {
-        let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
+        let fruits = ["Piña", "Pera", "Fresa", "Melón"]
 
         // Añade el código que permite modificar la lista (incluyendo un elemento al final)
 
@@ -149,10 +149,11 @@ describe("Operaciones iterables", () => {
     it("map nos permite realizar operaciones elemento a elemento", () => {
 
         let list = [1,5,7,9,11,13];
-
+        function menos1(num) {
+            return num -1
+        }
+        list = list.map(menos1);
         // utiliza la función map para aplicar los números de la lista
-        list = "???";
-        
 
         expect(list).to.have.same.members([0,4,6,8,10,12]);
     })
@@ -160,6 +161,11 @@ describe("Operaciones iterables", () => {
     it("map nos permite realizar operaciones elemento a elemento (2)", () => {
 
         let list = ["Pikachu", "Charmander", "Magikarp"];
+        
+        /* function pokemon(x){
+            return x te elijo a ti!
+        }
+        list = list.map */
 
         // utiliza la función map para aplicar los números de la lista y guardar la nueva lista en result
                 
